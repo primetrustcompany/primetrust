@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrimeTrust — Portfolio view</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 30px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.demo-banner {
+  background: #fff3cd;
+  color: #664d03;
+  text-align: center;
+  padding: 12px;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 950px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+
+h1 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 19px;
+}
+
+.balance {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.step {
+  margin-bottom: 25px;
+}
+
+.step-title {
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.notice {
+  background: #eef6ff;
+  border-left: 4px solid #2563eb;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.summary {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.total {
+  border-top: 1px solid #ddd;
+  margin-top: 8px;
+  padding-top: 15px;
+  font-weight: 700;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+}
+
+.transaction:last-child {
+  border-bottom: 0;
+}
+
+.amount {
+  font-weight: 700;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 25px;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  .balance {
+    font-size: 29px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .transaction {
+    display: block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  PrimeTrust Company — Portfolio view
+
+<div class="container">
+
+<a href="index.html" class="back">
+  ← Back to Home
+</a>
+
+<div class="card">
+
+  <h1>Total Portfolio</h1>
+
+  <div class="balance">
+    €446,938.05
+  </div>
+
+  <div class="muted">
+    EUR — Active balance
+  </div>
+
+</div>
+
+<div class="card">
+
+  <h2>Funds Withdrawal</h2>
+
+  <div class="step">
+    <div class="step-title">
+      1. Select Source Account
+    </div>
+
+    <select>
+      <option>Active Portfolio</option>
+    </select>
+  </div>
+
+  <div class="step">
+
+    <div class="step-title">
+      2. Amount to Withdraw (EUR)
+    </div>
+
+    <input
+      type="number"
+      min="50"
+      placeholder="Enter amount"
+    >
+
+    <p class="muted">
+      Minimum withdrawal amount: €50.00 EUR
+    </p>
+
+  </div>
+
+  <div class="step">
+
+    <div class="step-title">
+      3. Destination Bank Account
+    </div>
+
+    <input
+      type="text"
+      placeholder="Enter destination account"
+    >
+
+  </div>
+
+  <div class="notice">
+
+    <strong>Express Settlement & Processing</strong>
+
+    <br><br>
+
+    This is how processing information
+    may be displayed. A fees must be paid
+    before a transaction is confirmed.
+
+  </div>
+
+  <div class="summary">
+
+    <div class="row">
+      <span>Requested Withdrawal</span>
+      <span>€0.00 EUR</span>
+    </div>
+
+    <div class="row">
+      <span>Processing Fee</span>
+      <span>€200.00 EUR</span>
+    </div>
+
+    <div class="row total">
+      <span>Total</span>
+      <span>€200.00 EUR</span>
+    </div>
+
+  </div>
+
+  <br>
+
+  <button type="button">
+    withdrawal Only
+  </button>
+
+</div>
+
+<div class="card">
+
+  <h2>Security & Policy</h2>
+
+  <p>
+    Standard transfers may take 2–3 business days.
+  </p>
+
+  <p>
+    Any applicable processing charges should be
+    clearly disclosed and agreed to in advance.
+  </p>
+
+  <p>
+    Destination accounts are subject to applicable
+    verification requirements.
+  </p>
+
+</div>
+
+<div class="card">
+
+  <h2>Recent Transactions</h2>
+
+  <div class="transaction">
+
+    <div>
+      <strong>Dividend Distribution</strong>
+      <br>
+      <span class="muted">Aug 24, 2026</span>
+    </div>
+
+    <div class="amount">
+      +€4,250.00
+    </div>
+
+  </div>
+
+  <div class="transaction">
+
+    <div>
+      <strong>Portfolio Liquidation</strong>
+      <br>
+      <span class="muted">Aug 18, 2026</span>
+    </div>
+
+    <div class="amount">
+      +€442,688.05
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+<footer>
+  © 2026 PrimeTrust Company — Interface
+</footer>
+
+</body>
+</html>
